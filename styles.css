@@ -1,0 +1,845 @@
+    /* ==================== Fuentes y body ==================== */
+    
+    body {
+        /* font-family: 'Fredoka', sans-serif;*/
+        margin: 0;
+        padding: 0;
+        background: url('./imagen/fantasy_land_pink_cloud_rainbow_limited.jpg') no-repeat center center fixed;
+        background-size: cover;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    .mario {
+        font-family: "Coiny", system-ui;
+        /* Tipografía cursiva */
+        color: #ff1fc7;
+        font-size: 4.5rem;
+        text-align: center;
+        margin: 5px 0 15px 0;
+        -webkit-text-stroke: 3px rgba(255, 255, 255, 0.863);
+        paint-order: stroke fill;
+    }
+    
+    .mario {
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        /* cursor */
+        animation: typing 3s steps(12) forwards, blink 0.7s infinite;
+    }
+    /* Animación de escritura */
+    
+    @keyframes typing {
+        from {
+            width: 0
+        }
+        to {
+            width: 100%
+        }
+    }
+    /* Cursor parpadeando */
+    
+    @keyframes blink {
+        50% {
+            border-color: transparent
+        }
+    }
+    
+    h3,
+    h4,
+    p {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: all 0.8s ease;
+    }
+    
+    .show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    h1 span,
+    h2 {
+        font-family: 'Great Vibes', cursive;
+        color: #ff1fc7;
+        /* Dorado */
+        font-size: 3.5rem;
+    }
+    /*Letras estilo Mario
+    
+    .mario {
+        font-family: 'Great Vibes', cursive;
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    .mario span {
+        display: inline-block;
+        text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, -6px -6px 0 #fff, 6px -6px 0 #fff, -6px 6px 0 #fff, 6px 6px 0 #fff, 0px 10px 0 rgba(0, 0, 0, 0.35);
+    }
+    /* colores estilo mario */
+    /*
+    .mario span:nth-child(1) {
+        color: #ff2a2a;
+    }
+    
+    .mario span:nth-child(2) {
+        color: #ffd800;
+    }
+    
+    .mario span:nth-child(3) {
+        color: #00c853;
+    }
+    
+    .mario span:nth-child(4) {
+        color: #00a2ff;
+    }
+    
+    .mario span:nth-child(5) {
+        color: #ff2a2a;
+    }
+    
+    */
+    /*video fondo*/
+    
+    .video-fondo {
+        position: fixed;
+        /* se queda en su lugar mientras haces scroll */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        /* detrás de todo */
+    }
+    /* ==================== Contenedor principal ==================== */
+    
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        box-shadow: 0 20 60px rgba(0, 0, 0, 0.15);
+    }
+    /* ==================== Overlay ==================== */
+    
+    .overlay {
+        position: relative;
+        max-width: 500px;
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 20px;
+        border: 4px solid transparent;
+        border-image: url("./imagen/marco.jpg") 30 round;
+        /*  border: 4px solid #2758f8;*/
+        background: rgba(236, 228, 228, 0.021);
+        box-sizing: border-box;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* centra títulos, contador, botones */
+    }
+    /* ==================== Títulos ==================== */
+    
+    h1.title {
+        /* font-family: 'Fredoka', sans-serif;*/
+        font-family: "Alex Brush", cursive;
+        /* tipografía divertida estilo Lilo & Stitch */
+        color: #fffb00ee;
+        /* color base del texto */
+        font-size: 5rem;
+        text-align: center;
+        text-transform: uppercase;
+        /* efecto neón */
+        -webkit-text-stroke: 3px rgba(8, 8, 8, 0.842);
+        paint-order: stroke fill;
+        text-shadow: 0 0 5px #0000005d, 0 0 10px #00000048, 0 0 20px #f0f1eb18, 0 0 30px #ffffff28, 0 0 40px #181a1800, 0 0 50px #2f302e00, 0 0 60px #38383800;
+    }
+    
+    h2.subtitle {
+        color: #ff1fc7;
+        font-size: 5rem;
+        text-align: center;
+        margin: 5px 0 15px 0;
+        -webkit-text-stroke: 3px rgba(255, 255, 255, 0.863);
+        paint-order: stroke fill;
+    }
+    
+    h3.subtitle {
+        font-family: 'Cormorant Garamond', serif;
+        color: #ea04ff;
+        font-size: 2em;
+        text-align: center;
+        margin: 5px 0 15px 0;
+        -webkit-text-stroke: 3px rgba(255, 255, 255, 0.863);
+        paint-order: stroke fill;
+    }
+    
+    h4 {
+        font-family: 'Cormorant Garamond', serif;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        -webkit-text-stroke: 3px rgba(0, 0, 0, 0.733);
+        paint-order: stroke fill;
+    }
+    
+    h2 {
+        color: #ff1fc7;
+        text-align: center;
+        margin: 5px 0 15px 0;
+        paint-order: stroke fill;
+        -webkit-text-stroke: 3px rgba(255, 255, 255, 0.863);
+        paint-order: stroke fill;
+    }
+    
+    h3 {
+        color: #ffffff;
+        font-size: 1.7rem;
+        text-align: center;
+        margin: 5px 0 15px 0;
+        paint-order: stroke fill;
+        -webkit-text-stroke: 3px rgba(0, 0, 0, 0.863);
+        paint-order: stroke fill;
+    }
+    
+    p {
+        font-family: 'Cormorant Garamond', serif;
+        color: #ffffff;
+        font-size: 1.5rem;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        -webkit-text-stroke: 3px rgba(0, 0, 0, 0.747);
+        paint-order: stroke fill;
+    }
+    /* ==================== Imagen debajo del título ==================== */
+    
+    .party-image {
+        display: block;
+        width: 250px;
+        margin: 0 auto 15px auto;
+    }
+    /*imagen abajo*/
+    
+    .party-img {
+        display: block;
+        width: 100px;
+        margin: 0 auto 15px auto;
+    }
+    /* ==================== Contador lineal ==================== */
+    
+    .countdown-container {
+        display: flex;
+        flex-direction: initial;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        padding: 2px 5px;
+        border-radius: 15px;
+        border: 3px solid #ff1fc7;
+        background: linear-gradient(to bottom, #ff1fc7c9, #ff1fc77a);
+        box-shadow: 0 5px 10px rgb(0, 0, 0);
+        margin: 15px 0;
+    }
+    
+    .count-single {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .count-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .count-item span {
+        color: #fcfcfc;
+        font-size: 3em;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.11);
+    }
+    
+    .count-item small {
+        color: #ffffff;
+        font-size: 2em;
+        margin-top: 3px;
+        font-weight: 500;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    /* ==================== Info Icons ==================== */
+    
+    .info-icons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        margin: 15px 0;
+    }
+    
+    .icon-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /*    border: 2px solid #2758f8;*/
+        padding: 5px 10px;
+        border-radius: 15px;
+        /*  background: rgba(255, 255, 255, 0.1);*/
+    }
+    
+    .icon-box img.icon {
+        width: 250px;
+        margin-bottom: 5px;
+    }
+    /* ==================== Botones ==================== */
+    
+    .overlay a.btn,
+    .overlay a.btn-location {
+        display: inline-block;
+        padding: 15px 25px;
+        margin: 10px 0;
+        /* espacio entre ellos */
+        border-radius: 35px;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.7rem;
+        border: 3px solid #ff1fc7;
+        color: #ffffff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+        z-index: 5;
+    }
+    
+    .btn {
+        background: linear-gradient(to bottom, #ff1fc7d7, #ff1fc79f);
+    }
+    
+    .btn-location {
+        background: linear-gradient(to bottom, #ff1fc7b9, #ff1fc783);
+    }
+    
+    .btn:hover,
+    .btn-location:hover {
+        transform: scale(1.05);
+    }
+    /* ==================== Imágenes flotantes arriba ==================== */
+    
+    .imagenes-flotantes {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+    
+    .flotante {
+        width: 80px;
+        position: absolute;
+        animation: floatSideUpDown 5s ease-in-out infinite;
+        top: 100px;
+    }
+    /* Separar las dos imágenes flotantes */
+    
+    .flotante:nth-child(1) {
+        left: 5%;
+    }
+    
+    .flotante:nth-child(2) {
+        right: 5%;
+    }
+    /* Animación combinada: subir/bajar y moverse lateral */
+    
+    @keyframes floatSideUpDown {
+        0% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(10px, -15px);
+        }
+        50% {
+            transform: translate(0, 0);
+        }
+        75% {
+            transform: translate(-10px, -15px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+    /* ==================== Imágenes de abajo (characters) ==================== */
+    
+    .characters {
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        /* para colocarlas en la parte inferior */
+        bottom: 400px;
+        /* distancia desde abajo */
+        width: 100%;
+        /* ocupan todo el ancho del contenedor */
+        z-index: 3;
+    }
+    
+    .characters img {
+        width: 10px;
+        animation: floatUpDown 4s ease-in-out infinite;
+        /* si quieres movimiento */
+    }
+    /* Animación de flotación */
+    
+    @keyframes floatUpDown {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-15px);
+        }
+        /* sube 15px */
+        100% {
+            transform: translateY(0);
+        }
+    }
+    /* ==================== Burbujas ==================== */
+    /* ==================== Confeti ==================== */
+    /* ==================== Responsive ==================== */
+    
+    @media (max-width: 480px) {
+        h1.title {
+            font-size: 4em;
+        }
+        h2.subtitle {
+            font-size: 3em;
+        }
+        .count-item span {
+            font-size: 1.8em;
+        }
+        .count-item small {
+            font-size: 1.2em;
+        }
+        .overlay {
+            width: 95%;
+            padding: 10px 15px;
+        }
+        .characters img,
+        .flotante {
+            width: 100px;
+        }
+    }
+    /* ===== Confetti ===== */
+    
+    .confetti-piece {
+        position: absolute;
+        top: -10px;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: confetti-fall linear infinite;
+    }
+    
+    @keyframes confetti-fall {
+        0% {
+            transform: translateY(0) rotate(0deg);
+        }
+        100% {
+            transform: translateY(100vh) rotate(360deg);
+        }
+    }
+    /*confetti con imagen*/
+    
+    .confetti {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+    }
+    
+    .confetti-piece {
+        position: fixed;
+        top: -120px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: caer linear forwards;
+    }
+    
+    .confetti-piece img {
+        width: 100%;
+        height: 100%;
+        animation: parpadeo 1.5s ease-in-out infinite alternate;
+    }
+    
+    @keyframes caer {
+        0% {
+            transform: translateX(0) translateY(0) rotate(0deg);
+            opacity: 1;
+        }
+        25% {
+            transform: translateX(-20px) translateY(25vh) rotate(90deg);
+        }
+        50% {
+            transform: translateX(20px) translateY(50vh) rotate(180deg);
+        }
+        75% {
+            transform: translateX(-15px) translateY(75vh) rotate(270deg);
+        }
+        100% {
+            transform: translateX(15px) translateY(110vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+    
+    @keyframes parpadeo {
+        0% {
+            filter: brightness(1);
+        }
+        100% {
+            filter: brightness(1.6);
+        }
+    }
+    /* ===== Burbujas ===== */
+    
+    .bubble {
+        position: absolute;
+        bottom: -20px;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: bubble-rise linear forwards;
+    }
+    
+    @keyframes bubble-rise {
+        0% {
+            transform: translateY(0);
+            opacity: 0.5;
+        }
+        100% {
+            transform: translateY(-100vh);
+            opacity: 0;
+        }
+    }
+    /*burbujas con gif*/
+    
+    .balloons {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 3;
+    }
+    
+    .balloon {
+        position: absolute;
+        bottom: -120px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: rise 18s linear forwards;
+        opacity: 1;
+    }
+    
+    @keyframes rise {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-120vh);
+            opacity: 1;
+        }
+    }
+    /* imagens de suben y dasaparecen*/
+    
+    .balloon {
+        position: fixed;
+        bottom: -450px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    /* imagen que sale por la izquierda */
+    
+    .fly-left {
+        left: 10px;
+        animation: cruzarLeft 18s linear forwards;
+    }
+    
+    @keyframes cruzarLeft {
+        0% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        40% {
+            transform: translate(30vw, -40vh) rotate(8deg);
+            opacity: 1;
+        }
+        60% {
+            transform: translate(45vw, -60vh) rotate(-6deg);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(60vw, -110vh) rotate(0deg);
+            opacity: 0;
+        }
+    }
+    /* imagen que sale por la derecha */
+    
+    .fly-right {
+        right: 10px;
+        animation: cruzarRight 18s linear forwards;
+    }
+    
+    @keyframes cruzarRight {
+        0% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        40% {
+            transform: translate(-30vw, -40vh) rotate(-8deg);
+            opacity: 1;
+        }
+        60% {
+            transform: translate(-45vw, -60vh) rotate(6deg);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(-60vw, -110vh) rotate(0deg);
+            opacity: 0;
+        }
+    }
+    /*musica*/
+    
+    #music-button {
+        position: fixed;
+        top: 20px;
+        bottom: 20px;
+        left: 20px;
+        width: 40px;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        cursor: pointer;
+        z-index: 999;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    .bar {
+        width: 6px;
+        height: 8px;
+        background: linear-gradient(180deg, #8d01ff, #8400ff);
+        border-radius: 3px;
+        transform-origin: bottom center;
+        animation: bounce 1s infinite ease-in-out;
+    }
+    
+    .bar:nth-child(1) {
+        animation-delay: 0s;
+    }
+    
+    .bar:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    
+    .bar:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+    /* Animación de subida y bajada */
+    
+    @keyframes bounce {
+        0%,
+        100% {
+            transform: scaleY(0.3);
+        }
+        50% {
+            transform: scaleY(1.5);
+        }
+    }
+    /* Cuando la música está pausada, detener animación */
+    
+    #music-button.paused .bar {
+        animation-play-state: paused;
+    }
+    /* BOTÓN estilo guerrera neon */
+    
+    .kpop-play-btn {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #ff00cc;
+        background: rgba(231, 24, 250, 0.61);
+        color: #ff00cc;
+        font-size: 36px;
+        cursor: pointer;
+        transition: 0.4s;
+        box-shadow: 0 0 20px #ff00cc, inset 0 0 15px rgba(255, 0, 200, 0.5);
+    }
+    
+    .kpop-play-btn:hover {
+        transform: scale(1.1);
+        background: #ff00cc;
+        color: black;
+        box-shadow: 0 0 40px #ff00cc, 0 0 80px #6600ff;
+    }
+    /* MODAL aislado */
+    
+    .kpop-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(131, 20, 235, 0.9);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    
+    .kpop-modal-content {
+        width: 85%;
+        max-width: 800px;
+        background: #eb13ff;
+        padding: 20px;
+        border-radius: 15px;
+        position: relative;
+        box-shadow: 0 0 30px #ff00cc88;
+    }
+    
+    .kpop-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 22px;
+        cursor: pointer;
+        color: #ffffff;
+    }
+    /* opcional: bloquear scroll solo cuando abre */
+    
+    .no-scroll {
+        overflow: hidden;
+    }
+    /*imagenes laterales*/
+    
+    .personaje {
+        position: absolute;
+        top: 60%;
+        width: 170px;
+        opacity: 0;
+        margin: 25 50px;
+    }
+    /* BOB */
+    
+    .bob {
+        right: -250px;
+        width: 200px;
+        animation: entrarBob 1.2s ease-out forwards, flotarBob 4s ease-in-out 1.2s infinite;
+    }
+    /* PATRICIO */
+    
+    .patricio {
+        left: -250px;
+        animation: entrarPatricio 1.2s ease-out 0.6s forwards, flotarPatricio 4s ease-in-out 1.8s infinite;
+    }
+    /* Bob se coloca un poco a la derecha del centro */
+    
+    @keyframes entrarBob {
+        0% {
+            right: -50px;
+            opacity: 0;
+        }
+        100% {
+            right: 10%;
+            opacity: 1;
+        }
+    }
+    /* Patricio se coloca un poco a la izquierda del centro */
+    
+    @keyframes entrarPatricio {
+        0% {
+            left: -50px;
+            opacity: 0;
+        }
+        100% {
+            left: 5%;
+            opacity: 1;
+        }
+    }
+    /* Flotar Bob */
+    
+    @keyframes flotarBob {
+        0%,
+        100% {
+            transform: translateY(-50%);
+        }
+        50% {
+            transform: translateY(-60%);
+        }
+    }
+    /* Flotar Patricio */
+    
+    @keyframes flotarPatricio {
+        0%,
+        100% {
+            transform: translateY(-50%);
+        }
+        50% {
+            transform: translateY(-60%);
+        }
+    }
+    /*Firma*/
+    
+    .firma {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: 3px;
+        font-family: 'Poppins', sans-serif;
+        color: rgba(0, 0, 0, 0.664);
+        opacity: 0.45;
+        pointer-events: none;
+        z-index: 10;
+    }
+    
+    .section img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .lugar {
+        margin: 20px auto;
+        max-width: 400px;
+        z-index: 3;
+    }
+    
+    .lugar img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        z-index: 3;
+    }
+    
+    .party-image {
+        /* Duración de 1.5 segundos, efecto suave (ease-in) */
+        animation: aparecerDegradado 5s ease-in forwards;
+    }
+    
+    @keyframes aparecerDegradado {
+        from {
+            opacity: 0;
+            /* Empieza invisible */
+            transform: translateY(10px);
+            /* Opcional: sube un poquito al aparecer */
+        }
+        to {
+            opacity: 1;
+            /* Termina totalmente visible */
+            transform: translateY(0);
+        }
+    }

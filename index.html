@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta para vista previa en WhatsApp / Facebook -->
+    <meta property="og:title" content="Invitación Marian" />
+    <meta property="og:description" content="🎊🎉 Acompáñanos a celebrar mi Cumpleaños🎊🎉" />
+    <meta property="og:image" content="https://invitat3.github.io/cumple/imagen/portada.png" />
+    <meta property="og:url" content="https://invitat3.github.io/cumple/" />
+    <meta property="og:type" content="website" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/spongeboy-me-bob" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/super-mario-256" rel="stylesheet">
+    <title>Invitación</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Great Vibes', cursive;
+            /* -----------------------
+       ELIGE EL FONDO AQUÍ
+       ----------------------- */
+            /*   background-color: #00a2ff;
+            /* gris de base */
+            background-image: url('./imagen/fantasy_land_pink_cloud_rainbow_limited.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            /* mantiene proporción */
+        }
+        
+        h1 {
+            font-family: 'Great Vibes', cursive;
+        }
+        
+        .video-fondo {
+            position: fixed;
+            /* se queda en su lugar mientras haces scroll */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+            /* detrás de todo */
+        }
+        /* Cuando la pantalla sea más ancha que alta (computadora) */
+        
+        @media (orientation: landscape) {
+            .video-fondo {
+                object-fit: contain;
+                background: #008aca88;
+                .container {
+                    text-align: center;
+                    padding: 20px;
+                }
+            }
+        }
+        /* Imagen central responsiva */
+        
+        .container img {
+            width: 750vw;
+            /* máximo 50% del ancho de la ventana */
+            max-width: 220px;
+            /* nunca más de 250px de ancho */
+            height: auto;
+            /* mantiene proporción */
+            border-radius: 10px;
+            margin-bottom: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Botón dorado degradado */
+        
+        .container button {
+            padding: 12px 35px;
+            font-size: 18px;
+            font-weight: bold;
+            color: rgb(255, 102, 0);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: linear-gradient(to right, #ffffff, #ff1493);
+            transition: 0.3s;
+        }
+        
+        .container button:hover {
+            background: linear-gradient(to right, #fdfdfd, #ff1493);
+        }
+        /* Sección de invitación responsiva */
+        
+        .invitacion {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            max-width: 90vw;
+            /* se adapta a móviles */
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .invitacion.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .boton-dorado {
+            font-family: 'Great Vibes', cursive;
+            display: inline-block;
+            padding: 12px 35px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: linear-gradient(to right, #ff02ff25, #f900d838);
+            transition: 0.3s;
+            text-align: center;
+        }
+        
+        .boton-dorado:hover {
+            background: linear-gradient(to right, #f700ff27, #dc00f93a);
+        }
+    </style>
+</head>
+
+<body>
+    <!--Video fondo-->
+    <video autoplay muted loop class="video-fondo">
+    <source src="imagen/" type="video/mp4">
+  </video>
+
+    <div class="container">
+        <!-- Imagen central opcionalmente clicable -->
+
+
+        <img src="./imagen/Unicorn Sticker by Elen Lescoat.gif" alt="Invitación">
+
+        <img src="./imagen/Fiesta Cumple Sticker by TOY CANTANDO.gif" alt="Invitación">
+
+        <!-- Botón dorado que lleva a otra página -->
+
+
+        <a href="invitacion.html" class="boton-dorado">
+            Ver invitación
+             </a>
+    </div>
+</body>
+
+</html

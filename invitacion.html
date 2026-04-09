@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Marian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cookie&family=Emblema+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/spongeboy-me-bob" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/super-mario-256" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Coiny&family=Cookie&family=Emblema+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--Video fondo-->
+    <video autoplay muted loop class="video-fondo">
+    <source src="imagen/" type="video/mp4">
+  </video>
+
+
+    <!-- Música de fondo -->
+    <!-- Botón de música -->
+    <div id="music-button">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <audio id="music" src="musica/ssstik.io_1775770465748.mp3" loop autoplay></audio>
+
+    <div class="container">
+        <img src="imagen/sentado.png" class="personaje bob">
+        <img src="imagen/istockphoto-2160780626-612x612-removebg-preview (1).png" class="personaje patricio">
+
+        <div class="confetti"></div>
+        <div class="bubbles"></div>
+        <div class="characters">
+
+            <img src="imagen/I Love You Heart Sticker by Simon Falk.gif" alt="Stitch " class="stitch ">
+        </div>
+
+        <div class="overlay ">
+            <div class="imagenes-flotantes ">
+
+                <!-- <img src="imagen/" class="flotante ">-->
+            </div>
+            <h2 class="subtitle "> Te invito a Mi </h2>
+            <h2 class="subtitle ">Cumple #</h2>
+            <img src="imagen/numero.png" alt=" Fiesta " class="party-image ">
+            <h1 class="mario">
+                Marian <br> Aneley
+            </h1>
+
+
+
+
+            <!-- Imagen debajo del título -->
+
+
+
+
+            <h3 class="subtitle ">30 de Mayo de 2026</h3>
+            <p>Faltan:</p>
+            <div class="countdown-container">
+                <p class="countdown-title"></p>
+                <div class="count-single">
+                    <div class="count-item">
+                        <span id="days">00</span>
+                        <small>Días</small>
+                    </div>
+                    <div class="count-item">
+                        <span id="hours">00</span>
+                        <small>Horas</small>
+                    </div>
+                    <div class="count-item">
+                        <span id="minutes">00</span>
+                        <small>Minutos</small>
+                    </div>
+                    <div class="count-item">
+                        <span id="seconds">00</span>
+                        <small>Segundos</small>
+                    </div>
+                </div>
+            </div>
+            <div class="info-icons ">
+                <div class="icon-box ">
+                    <img src="imagen/Fiesta Cumple Sticker by TOY CANTANDO.gif" alt="Comida " class="icon ">
+                    <img src="imagen/Pink Sticker Sticker by Simon Falk.gif" alt=" Fiesta " class="party-img">
+                    <h3 class="subtitle">Te invitamos a celebrar juntos</h3>
+                    <h3>Habrá mucha alegría</h3>
+                    <p>&</p>
+                    <h3>diversión</h3>
+
+                    <!--  <img src="imagen/" alt=" Fiesta " class="party-image ">-->
+
+
+                </div>
+
+
+                <div class="icon-box ">
+
+                    <!-- <img src="imagen/surfe.webp " alt="Traje de baño " class="icon ">-->
+
+
+                    <button class="kpop-play-btn" onclick="openKpopVideo()">
+  ▶
+</button>
+                </div>
+            </div>
+
+            <div class="lugar">
+
+
+            </div>
+
+            <div>
+                <h4>Hora: 2:00 PM</h4>
+                <h4>Lugar: C15 #85 x 16 y 18 Col. Mejorada</h4>
+
+            </div>
+
+            <div><a href="https://maps.app.goo.gl/bLZjqoZNxe1Evt8A6" target="_blank " class="btn-location ">
+   Ver ubicación
+</a>
+            </div>
+            <div>
+                <a href="https://wa.me/5219903334016 " target="_blank " class="btn ">Confirmar asistencia</a>
+            </div>
+            <h2>¡Te esperamos!</h2>
+        </div>
+    </div>
+    <div id="kpopModal" class="kpop-modal">
+        <div class="kpop-modal-content">
+
+            <span class="kpop-close" onclick="closeKpopVideo()">✖</span>
+
+            <video id="kpopVideo" width="100%" controls preload="auto">
+      <source src="imagen/ssstik.io_1775753932754.mp4" type="video/mp4">
+    </video>
+
+        </div>
+
+    </div>
+    <div class="confetti"></div>
+    <div class="balloons"></div>
+    <div class="firma">INVITATE</div>
+    <script src="script.js "></script>
+    <script>
+        let musicWasPlaying = false;
+
+        function openKpopVideo() {
+            const modal = document.getElementById("kpopModal");
+            const video = document.getElementById("kpopVideo");
+            const music = document.getElementById("bgMusic");
+
+            modal.style.display = "flex";
+
+            if (music && !music.paused) {
+                musicWasPlaying = true;
+                music.pause();
+            }
+
+            video.play();
+        }
+
+        function closeKpopVideo() {
+            const modal = document.getElementById("kpopModal");
+            const video = document.getElementById("kpopVideo");
+            const music = document.getElementById("bgMusic");
+
+            modal.style.display = "none";
+
+            video.pause();
+            video.currentTime = 0;
+
+            if (music && musicWasPlaying) {
+                music.play();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
